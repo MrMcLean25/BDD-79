@@ -52,7 +52,7 @@ function crear_tabla_trabajador($conn) {
 function crear_tabla_estudiante($conn) {
     
     $sql = "CREATE TABLE IF NOT EXISTS estudiantes (
-        id_estudiante,
+        id_estudiante SERIAL PRIMARY KEY,
         id_persona,
         numero_estudiante,
         cohorte,
@@ -109,12 +109,12 @@ function crear_tabla_planes_estudio($conn) {
 
 function crear_tabla_cursos($conn) {
     $sql = "CREATE TABLE IF NOT EXISTS cursos (
-        id_curso,
-        sigla,
-        nombre,
-        caracter,
-        nivel,
-        ciclo
+        id_curso SERIAL PRIMARY KEY,
+        sigla VARCHAR(10) UNIQUE NOT NULL,
+        nombre VARCHAR(255),
+        caracter VARCHAR(50),
+        nivel INT,
+        ciclo VARCHAR(10)
     )";
 
     $result = pg_query($conn, $sql);
@@ -128,8 +128,8 @@ function crear_tabla_cursos($conn) {
 
 function crear_tabla_historial_academico($conn) {
     $sql = "CREATE TABLE IF NOT EXISTS historiales_academicos (
-        id_historial,
-        id_estudiante,
+        id_historial SERIAL PRIMARY KEY,
+        id_estudiante SERIAL,
         id_curso,
         nota,
         calificacion,
@@ -163,7 +163,7 @@ function crear_tabla_departamentos($conn) {
 function crear_tabla_facultades($conn) {
     $sql = "CREATE TABLE IF NOT EXISTS facultades (
         id_facultad,
-        nombre_facultad,
+        nombre_facultad ,
         codigo_departamento
     )";
 
@@ -178,7 +178,7 @@ function crear_tabla_facultades($conn) {
 
 function crear_tabla_oferta_academica($conn) {
     $sql = "CREATE TABLE IF NOT EXISTS oferta_academica (
-        id_oferta,
+        id_oferta ,
         id_curso,
         vacantes,
         sala,
@@ -213,13 +213,6 @@ function crear_tabla_prerrequisitos($conn) {
         echo "Error creando la tabla: ".pg_last_error($conn) . "\n";
     }
 }
-
-
-
-
-
-
-
 
 ?>
 
