@@ -1,12 +1,12 @@
 <?php
 
-$ruta_cursos = '../archivos/asignaturas.csv';
-$ruta_docentes_planificados = '../archivos/docentes_planificados.csv';
-$ruta_estudiantes = '../archivos/estudiantes.csv';
-$ruta_notas = '../archivos/notas.csv';
-$ruta_planeacion = '../archivos/planeacion.csv';
-$ruta_planes = '../archivos/planes.csv';
-$ruta_prerrequisitos = '../archivos/prerrequisitos.csv';
+$ruta_cursos = '../data/asignaturas.csv';
+$ruta_docentes_planificados = '../data/docentes_planificados.csv';
+$ruta_estudiantes = '../data/estudiantes.csv';
+$ruta_notas = '../data/notas.csv';
+$ruta_planeacion = '../data/planeacion.csv';
+$ruta_planes = '../data/planes.csv';
+$ruta_prerrequisitos = '../data/prerrequisitos.csv';
 
 ini_set('memory_limit', '256M');
 
