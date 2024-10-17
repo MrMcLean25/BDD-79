@@ -11,12 +11,8 @@ include('templates/header.html');
 
 <body>
   <div class="user">
-  <h1 class="title">Biblioteca de Spotify</h1>
-  <p class="description">Aquí podrás encontrar información sobre las canciones más escuchadas.</p>
-
-  <h2 class="subtitle">Ranking de canciones por reproducciones</h2>
-  <p class="prompt">Ingresa el largo del top de canciones:</p>
-  <form class="form" action="consultas/consulta_cancion_mas_escuchada.php" method="post">
+  <h1 class="title">Bananer</h1>
+  <form class="form" action="consultas/...php" method="post">
     <input class="form-input" type="number" required placeholder="Ingresa un número" name="cantidad" min="1" max="157"> 
     <br>
     <input class="form-button" type="submit" value="Buscar">
@@ -24,8 +20,8 @@ include('templates/header.html');
   <br>
   <br>
 
-  <p class="prompt">Ingresa el nombre de un artista:</p>
-  <form class="form" action="consultas/consulta_canciones_por_artista.php" method="post">
+  <p class="prompt">Consulta 2</p>
+  <form class="form" action="consultas/....php" method="post">
     <input class="form-input" type="text" required placeholder="Ingresa un nombre" name="artista"> 
     <br>
     <input class="form-button" type="submit" value="Buscar">
